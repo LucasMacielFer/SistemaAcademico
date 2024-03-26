@@ -1,8 +1,9 @@
 #pragma once
 #include "stdafx.h"
 #include "listaDepartamentos.h"
+#include "identificador.h"
 
-class Universidade
+class Universidade: public Identificador
 {
 private:
 	string nome;
@@ -10,7 +11,8 @@ private:
 
 public:
 	Universidade();
-	Universidade(string n);
+	Universidade(int i);
+	Universidade(int i, string n);
 	~Universidade();
 	string getNome();
 	void setNome(string n);

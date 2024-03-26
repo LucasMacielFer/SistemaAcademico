@@ -1,19 +1,33 @@
 #include "disciplina.h"
 #include "departamento.h"
 
-Disciplina::Disciplina(int i, string n, string ac)
+Disciplina::Disciplina(int i, string n, string ac):
+Identificador(i),
+nome(n),
+areaConhecimento(ac),
+pDep(NULL),
+pLista(NULL)
 {
-	id = i;
-	nome = n;
-	areaConhecimento = ac;
-	pDep = NULL;
 	pLista = new ListaAlunos();
 }
 
-Disciplina::Disciplina()
+Disciplina::Disciplina(int i):
+Identificador(i),
+nome(""),
+areaConhecimento(""),
+pDep(NULL),
+pLista(NULL)
 {
-	id = -1;
-	pDep = NULL;
+	pLista = new ListaAlunos();
+}
+
+Disciplina::Disciplina() :
+Identificador(),
+nome(""),
+areaConhecimento(""),
+pDep(NULL),
+pLista(NULL)
+{
 	pLista = new ListaAlunos();
 }
 
@@ -35,16 +49,6 @@ string Disciplina::getNome()
 void Disciplina::setNome(string n)
 {
 	nome = n;
-}
-
-int Disciplina::getID()
-{
-	return id;
-}
-
-void Disciplina::setID(int i)
-{
-	id = i;
 }
 
 Departamento* Disciplina::getDepartamento()

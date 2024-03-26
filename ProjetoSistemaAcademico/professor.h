@@ -13,8 +13,8 @@ private:
 
 public:
 	Professor();
-	Professor(string name, int d, int m, int y);
-	Professor(string name, int d, int m, int y, string c, Departamento* dep, Universidade* u);
+	Professor(int i, string name, int d, int m, int y);
+	Professor(int i, string name, int d, int m, int y, string c, Departamento* dep, Universidade* u);
 	~Professor();
 	void setCargo(string c);
 	void setDepto(Departamento* d);

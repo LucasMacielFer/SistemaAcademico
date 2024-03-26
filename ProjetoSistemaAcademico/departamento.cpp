@@ -1,29 +1,43 @@
 #include "universidade.h"
 #include "departamento.h"
 
-Departamento::Departamento()
+Departamento::Departamento():
+Identificador(),
+pListaDisc(NULL),
+pListaProfs(NULL),
+uni(NULL),
+nome("")
 {
-	pLista = new ListaDisciplinas();
-	id = -1;
-	uni = NULL;
+	pListaDisc = new ListaDisciplinas();
+	pListaProfs = new ListaProfessores();
 }
 
-Departamento::Departamento(int i, string n)
+Departamento::Departamento(int i, string n):
+Identificador(i),
+pListaDisc(NULL),
+pListaProfs(NULL),
+uni(NULL),
+nome(n)
 {
-	pLista = new ListaDisciplinas();
-	id = i;
-	nome = n;
-	uni = NULL;
+	pListaDisc = new ListaDisciplinas();
+	pListaProfs = new ListaProfessores();
+}
+
+Departamento::Departamento(int i) :
+Identificador(i),
+pListaDisc(NULL),
+pListaProfs(NULL),
+uni(NULL),
+nome("")
+{
+	pListaDisc = new ListaDisciplinas();
+	pListaProfs = new ListaProfessores();
 }
 
 Departamento::~Departamento() 
 { 
-	delete pLista;
-}
-
-void Departamento::setID(int i)
-{
-	id = i;
+	delete pListaDisc;
+	delete pListaProfs;
 }
 
 void Departamento::setNome(string n)
@@ -43,5 +57,12 @@ string Departamento::getNome()
 
 void Departamento::incluiDisc(Disciplina* disc)
 {
-	pLista->incluiDisc(disc);
+	pListaDisc->incluiDisc(disc);
+	disc->setDepartamento(this);
+}
+
+void Departamento::incluiProf(Professor* prof)
+{
+	pListaProfs->incluiProf(prof);
+	prof->setDepto(this);
 }

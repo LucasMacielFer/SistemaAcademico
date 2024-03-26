@@ -1,10 +1,10 @@
 #include "elDisciplina.h"
 
-ElDisciplina::ElDisciplina()
+ElDisciplina::ElDisciplina():
+prev(NULL),
+next(NULL),
+disc(NULL)
 {
-	prev = NULL;
-	next = NULL;
-	disc = NULL;
 }
 
 ElDisciplina::~ElDisciplina()

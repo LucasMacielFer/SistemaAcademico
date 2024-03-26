@@ -12,6 +12,7 @@ private:
 public:
 	ListaUniversidades();
 	~ListaUniversidades();
+	bool isEmpty();
 	int getNumeroUniversidades();
 	void incluiUni(Universidade* u);
 	void listarUniversidades();

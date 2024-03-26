@@ -1,21 +1,23 @@
 #include "professor.h"
 
 Professor::Professor():
-Pessoa()
+Pessoa(),
+cargo(""),
+deptFiliado(NULL),
+univFiliado(NULL)
 {
-	deptFiliado = NULL;
-	univFiliado = NULL;
 }
 
-Professor::Professor(string name, int d, int m, int y):
-Pessoa(name, d, m, y)
+Professor::Professor(int i, string name, int d, int m, int y):
+Pessoa(i, name, d, m, y),
+cargo(""),
+deptFiliado(NULL),
+univFiliado(NULL)
 {
-	deptFiliado = NULL;
-	univFiliado = NULL;
 }
 
-Professor::Professor(string name, int d, int m, int y, string c, Departamento* dep, Universidade* u):
-Pessoa(name, d, m, y)
+Professor::Professor(int i, string name, int d, int m, int y, string c, Departamento* dep, Universidade* u):
+Pessoa(i, name, d, m, y)
 {
 	cargo = c;
 	deptFiliado = dep;

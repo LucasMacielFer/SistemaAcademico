@@ -11,7 +11,8 @@ private:
 
 public:
 	Aluno();
-	Aluno(string name, int d, int m, int y, int r, int c, Universidade* u);
+	Aluno(int i, string name, int d, int m, int y, int r, int c, Universidade* u = NULL);
+	Aluno(int i, string name, int d, int m, int y);
 	~Aluno();
 	void setRA(int r);
 	void setCR(int c);

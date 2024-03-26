@@ -1,10 +1,10 @@
 #include "listaUniversidades.h"
 
-ListaUniversidades::ListaUniversidades()
+ListaUniversidades::ListaUniversidades():
+pUniAtual(NULL),
+pUniPrimeiro(NULL),
+numeroUniversidades(0)
 {
-	pUniAtual = NULL;
-	pUniPrimeiro = NULL;
-	numeroUniversidades = 0;
 }
 
 ListaUniversidades::~ListaUniversidades()
@@ -17,6 +17,11 @@ ListaUniversidades::~ListaUniversidades()
 		delete pAux;
 		pAux = pUniPrimeiro;
 	}
+}
+
+bool ListaUniversidades::isEmpty()
+{
+	return pUniPrimeiro == NULL ? true : false;
 }
 
 int ListaUniversidades::getNumeroUniversidades()

@@ -25,10 +25,15 @@
     <ClCompile Include="elAluno.cpp" />
     <ClCompile Include="elDepartamento.cpp" />
     <ClCompile Include="elDisciplina.cpp" />
+    <ClCompile Include="elProfessor.cpp" />
+    <ClCompile Include="elProfessor.h" />
     <ClCompile Include="elUniversidade.cpp" />
+    <ClCompile Include="identificador.cpp" />
     <ClCompile Include="listaAlunos.cpp" />
     <ClCompile Include="listaDepartamentos.cpp" />
     <ClCompile Include="listaDisciplinas.cpp" />
+    <ClCompile Include="listaProfessores.cpp" />
+    <ClCompile Include="listaProfessores.h" />
     <ClCompile Include="listaUniversidades.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pessoa.cpp" />
@@ -44,6 +49,7 @@
     <ClInclude Include="elDepartamento.h" />
     <ClInclude Include="elDisciplina.h" />
     <ClInclude Include="elUniversidade.h" />
+    <ClInclude Include="identificador.h" />
     <ClInclude Include="listaAlunos.h" />
     <ClInclude Include="listaDepartamentos.h" />
     <ClInclude Include="listaDisciplinas.h" />
@@ -51,6 +57,8 @@
     <ClInclude Include="pessoa.h" />
     <ClInclude Include="principal.h" />
     <ClInclude Include="professor.h" />
+    <ClInclude Include="recuperaArquivo.h" />
+    <ClInclude Include="salvaArquivo.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="universidade.h" />
   </ItemGroup>

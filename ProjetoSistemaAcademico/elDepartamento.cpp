@@ -1,12 +1,10 @@
 #include "elDepartamento.h"
 
-#include "elDisciplina.h"
-
-ElDepartamento::ElDepartamento()
+ElDepartamento::ElDepartamento():
+prev(NULL),
+next(NULL),
+dept(NULL)
 {
-	prev = NULL;
-	next = NULL;
-	dept = NULL;
 }
 
 ElDepartamento::~ElDepartamento()

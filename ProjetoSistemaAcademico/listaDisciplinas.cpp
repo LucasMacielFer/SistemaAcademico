@@ -1,10 +1,10 @@
 #include "listaDisciplinas.h"
 
-ListaDisciplinas::ListaDisciplinas()
+ListaDisciplinas::ListaDisciplinas():
+pDiscAtual(NULL),
+pDiscPrimeiro(NULL),
+numeroDisc(0)
 {
-	pDiscAtual = NULL;
-	pDiscPrimeiro = NULL;
-	numeroDisc = 0;
 }
 
 ListaDisciplinas::~ListaDisciplinas()

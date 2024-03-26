@@ -1,19 +1,27 @@
 #include "aluno.h"
 
 Aluno::Aluno():
-Pessoa()
+Pessoa(),
+RA(0),
+CR(-1),
+univ(NULL)
 {
-	RA = -1;
-	CR = -1;
-	univ = NULL;
 }
 
-Aluno::Aluno(string name, int d, int m, int y, int r, int c, Universidade* u):
-Pessoa(name, d, m, y)
+Aluno::Aluno(int i, string name, int d, int m, int y, int r, int c, Universidade* u):
+Pessoa(i, name, d, m, y),
+RA(r),
+CR(c),
+univ(u)
 {
-	RA = r;
-	CR = c;
-	univ = u;
+}
+
+Aluno::Aluno(int i, string name, int d, int m, int y) :
+Pessoa(i, name, d, m, y),
+RA(0),
+CR(-1),
+univ(NULL)
+{
 }
 
 Aluno::~Aluno()

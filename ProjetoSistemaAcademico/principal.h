@@ -1,20 +1,27 @@
 #pragma once
-#include "universidade.h"
+#include "listaUniversidades.h"
 #include "professor.h"
 #include "stdafx.h"
 
 class Principal
 {
 private:
-	Professor simao;
-	Professor fabro;
-	Professor carmen;
-	Universidade UTFPR;
-	Departamento DAELN;
-	Departamento DAINF;
+	ListaUniversidades* listaUniv;
+	bool salvo;
+	int codigo;
+
 public:
 	Principal();
 	~Principal();
+	void menuInicial();
+	void cadastraObjeto();
+	void gravaObjetos();
+	void cadastraUniversidade();
+	void cadastraDepartamento();
+	void cadastraDisciplina();
+	void cadastraAluno();
+	void cadastraProfessor();
+	void sair();
 	void executar();
 };
  

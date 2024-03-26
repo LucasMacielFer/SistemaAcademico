@@ -1,10 +1,10 @@
 #include "elUniversidade.h"
 
-ElUniversidade::ElUniversidade()
+ElUniversidade::ElUniversidade():
+prev(NULL),
+next(NULL),
+pUniv(NULL)
 {
-	prev = NULL;
-	next = NULL;
-	pUniv = NULL;
 }
 
 ElUniversidade::~ElUniversidade()

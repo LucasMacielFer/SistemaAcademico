@@ -1,14 +1,14 @@
 #include "elAluno.h"
 
-ElAluno::ElAluno()
+ElAluno::ElAluno():
+faltas(0),
+nota(0),
+parcial1(0),
+parcial2(0),
+pAluno(NULL),
+prev(NULL),
+next(NULL)
 {
-	faltas = 0;
-	nota = 0;
-	parcial1 = 0;
-	parcial2 = 0;
-	pAluno = NULL;
-	prev = NULL;
-	next = NULL;
 }
 
 ElAluno::~ElAluno()

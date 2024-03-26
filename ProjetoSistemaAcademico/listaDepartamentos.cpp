@@ -1,10 +1,10 @@
 #include "listaDepartamentos.h"
 
-ListaDepartamentos::ListaDepartamentos()
+ListaDepartamentos::ListaDepartamentos():
+pDeptAtual(NULL),
+pDeptPrimeiro(NULL),
+numeroDeptos(0)
 {
-	pDeptAtual = NULL;
-	pDeptPrimeiro = NULL;
-	numeroDeptos = 0;
 }
 
 ListaDepartamentos::~ListaDepartamentos()

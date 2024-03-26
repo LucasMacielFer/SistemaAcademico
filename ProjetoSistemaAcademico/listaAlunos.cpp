@@ -1,10 +1,10 @@
 #include "listaAlunos.h"
 
-ListaAlunos::ListaAlunos()
+ListaAlunos::ListaAlunos():
+pAlunoAtual(NULL),
+pAlunoPrimeiro(NULL),
+numeroAlunos(0)
 {
-	pAlunoAtual = NULL;
-	pAlunoPrimeiro = NULL;
-	numeroAlunos = 0;
 }
 
 ListaAlunos::~ListaAlunos()

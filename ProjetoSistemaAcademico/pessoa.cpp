@@ -1,22 +1,34 @@
 #include "pessoa.h"
 #include "universidade.h"
 
-Pessoa::Pessoa(string n, int d, int m, int y)
+Pessoa::Pessoa(int i, string n, int d, int m, int y) :
+Identificador(i),
+nome(n),
+dia(d),
+mes(m),
+ano(y),
+idade(0)
 {
-    nome = n;
-    dia = d;
-    mes = m;
-    ano = y;
-    idade = 0;
 }
 
-Pessoa::Pessoa()
+Pessoa::Pessoa(string name, int d, int m, int y):
+Identificador(),
+nome(name),
+dia(d),
+mes(m),
+ano(y),
+idade(0)
 {
-    nome = "";
-    dia = 0;
-    mes = 0;
-    ano = 0;
-    idade = -1;
+}
+
+Pessoa::Pessoa():
+Identificador(),
+nome(""),
+dia(0),
+mes(0),
+ano(0),
+idade(0)
+{
 }
 
 Pessoa::~Pessoa()
