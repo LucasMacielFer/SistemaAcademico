@@ -3,6 +3,8 @@
 Aluno::Aluno():
 Pessoa()
 {
+	RA = -1;
+	CR = -1;
 	univ = NULL;
 }
 

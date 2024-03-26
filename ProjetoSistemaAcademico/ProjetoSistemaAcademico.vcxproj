@@ -18,6 +18,42 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="aluno.cpp" />
+    <ClCompile Include="departamento.cpp" />
+    <ClCompile Include="disciplina.cpp" />
+    <ClCompile Include="elAluno.cpp" />
+    <ClCompile Include="elDepartamento.cpp" />
+    <ClCompile Include="elDisciplina.cpp" />
+    <ClCompile Include="elUniversidade.cpp" />
+    <ClCompile Include="listaAlunos.cpp" />
+    <ClCompile Include="listaDepartamentos.cpp" />
+    <ClCompile Include="listaDisciplinas.cpp" />
+    <ClCompile Include="listaUniversidades.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="pessoa.cpp" />
+    <ClCompile Include="principal.cpp" />
+    <ClCompile Include="professor.cpp" />
+    <ClCompile Include="universidade.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="aluno.h" />
+    <ClInclude Include="departamento.h" />
+    <ClInclude Include="disciplina.h" />
+    <ClInclude Include="elAluno.h" />
+    <ClInclude Include="elDepartamento.h" />
+    <ClInclude Include="elDisciplina.h" />
+    <ClInclude Include="elUniversidade.h" />
+    <ClInclude Include="listaAlunos.h" />
+    <ClInclude Include="listaDepartamentos.h" />
+    <ClInclude Include="listaDisciplinas.h" />
+    <ClInclude Include="listaUniversidades.h" />
+    <ClInclude Include="pessoa.h" />
+    <ClInclude Include="principal.h" />
+    <ClInclude Include="professor.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="universidade.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
