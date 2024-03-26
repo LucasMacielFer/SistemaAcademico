@@ -1,0 +1,23 @@
+#pragma once
+#include "stdafx.h"
+#include "pessoa.h"
+#include "departamento.h"
+#include "universidade.h"
+
+class Professor : public Pessoa
+{
+private:
+	string cargo;
+	Departamento* deptFiliado;
+	Universidade* univFiliado;
+
+public:
+	Professor();
+	Professor(string name, int d, int m, int y);
+	Professor(string name, int d, int m, int y, string c, Departamento* dep, Universidade* u);
+	~Professor();
+	void setCargo(string c);
+	void setDepto(Departamento* d);
+	void setUni(Universidade* u);
+	void ondeTrabalha();
+};
