@@ -46,11 +46,13 @@
     <ClInclude Include="elAluno.h" />
     <ClInclude Include="elDepartamento.h" />
     <ClInclude Include="elDisciplina.h" />
+    <ClInclude Include="elProfessor.h" />
     <ClInclude Include="elUniversidade.h" />
     <ClInclude Include="identificador.h" />
     <ClInclude Include="listaAlunos.h" />
     <ClInclude Include="listaDepartamentos.h" />
     <ClInclude Include="listaDisciplinas.h" />
+    <ClInclude Include="listaProfessores.h" />
     <ClInclude Include="listaUniversidades.h" />
     <ClInclude Include="pessoa.h" />
     <ClInclude Include="principal.h" />
