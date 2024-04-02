@@ -59,3 +59,28 @@ void ListaUniversidades::listarUniversidades()
 		cout << paux->getUniv()->getNome() << endl;
 	}
 }
+
+Universidade* ListaUniversidades::encontraUni(string n)
+{
+	bool achou = false;
+	ElUniversidade* pAux;
+	Universidade* univ = NULL;
+	pAux = pUniPrimeiro;
+	
+	while ((pAux != NULL) && (!achou))
+	{
+		if (pAux->getUniv()->getNome() == n)
+		{
+			univ = pAux->getUniv();
+			achou = true;
+		}
+		pAux = pAux->getNext();
+	}
+
+	return univ;
+}
+
+ElUniversidade* ListaUniversidades::getFirst()
+{
+	return pUniPrimeiro;
+}

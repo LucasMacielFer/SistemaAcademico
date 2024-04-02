@@ -15,4 +15,5 @@ public:
 	int getNumeroDeptos();
 	void incluiDept(Departamento* d);
 	void listarDeptos();
+	ElDepartamento* getFirst();
 };

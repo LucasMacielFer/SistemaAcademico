@@ -87,22 +87,147 @@ void Principal::gravaObjetos()
 
 void Principal::cadastraUniversidade()
 {
+	string nome;
+	Universidade* uni;
+	cout << "Nome da universidade: " << endl;
+	cin >> nome;
+	uni = new Universidade(codigo, nome);
+	codigo++;
+	listaUniv->incluiUni(uni);
 }
 
 void Principal::cadastraDepartamento()
 {
+	string nomeUniv;
+	string nomeDept;
+	Universidade* univ;
+	Departamento* depto;
+	cout << "Em qual universidade deseja cadastrar o departamento?" << endl;
+	listaUniv->listarUniversidades();
+	
+	cin >> nomeUniv;
+	univ = listaUniv->encontraUni(nomeUniv);
+
+	if (univ == NULL)
+	{
+		cout << "Univerisdade não encontrada!" << endl;
+	}
+	else
+	{
+		cout << "Nome do departamento: " << endl;
+		cin >> nomeDept;
+		depto = new Departamento(codigo, nomeDept);
+		codigo++;
+		univ->incluiDept(depto);
+	}
 }
 
 void Principal::cadastraDisciplina()
 {
+	string nomeUniv, nomeDept, nomeDisc, acDisc;
+	Universidade* univ;
+	Departamento* depto;
+	Disciplina* disc;
+	cout << "Em qual universidade deseja cadastrar a disciplina?" << endl;
+	listaUniv->listarUniversidades();
+
+	cin >> nomeUniv;
+	univ = listaUniv->encontraUni(nomeUniv);
+
+	if (univ == NULL)
+	{
+		cout << "Univerisdade não encontrada!" << endl;
+	}
+	else
+	{
+		cout << "Em qual departamento deseja cadastrar a disciplina?" << endl;
+		univ->imprimeDeptos();
+		cin >> nomeDept;
+		depto = univ->encontraDept(nomeDept);
+		if (depto == NULL)
+		{
+			cout << "Departamento não encontrado!" << endl;
+		}
+		else
+		{
+			cout << "Nome da disciplina: " << endl;
+			cin >> nomeDisc;
+			cout << "Area de conhecimento: " << endl;
+			cin >> acDisc;
+			disc = new Disciplina(codigo, nomeDisc, acDisc);
+			codigo++;
+			depto->incluiDisc(disc);
+		}
+	}
 }
 
 void Principal::cadastraAluno()
 {
+	string nomeUniv, nomeAluno;
+	int d, m, y;
+	Universidade* univ;
+	Aluno* al;
+
+	cout << "Em qual universidade deseja cadastrar o aluno?" << endl;
+	listaUniv->listarUniversidades();
+
+	cin >> nomeUniv;
+	univ = listaUniv->encontraUni(nomeUniv);
+
+	if (univ == NULL)
+	{
+		cout << "Univerisdade não encontrada!" << endl;
+	}
+	else
+	{
+		cout << "Nome do aluno: " << endl;
+		cin >> nomeAluno;
+		cout << "Data de nascimento do aluno: " << endl;
+		cin >> d >> m >> y;
+		al = new Aluno(codigo, nomeAluno, d, m, y);
+		codigo++;
+		univ->incluiAluno(al);
+	}
 }
 
 void Principal::cadastraProfessor()
 {
+	string nomeUniv, nomeDept, nomeProf;
+	int d, m, y;
+	Universidade* univ;
+	Departamento* depto;
+	Professor* prof;
+	cout << "Em qual universidade deseja cadastrar o professor?" << endl;
+	listaUniv->listarUniversidades();
+
+	cin >> nomeUniv;
+	univ = listaUniv->encontraUni(nomeUniv);
+
+	if (univ == NULL)
+	{
+		cout << "Univerisdade não encontrada!" << endl;
+	}
+	else
+	{
+		cout << "Em qual departamento deseja cadastrar o professor?" << endl;
+		univ->imprimeDeptos();
+		cin >> nomeDept;
+		depto = univ->encontraDept(nomeDept);
+		if (depto == NULL)
+		{
+			cout << "Departamento não encontrado!" << endl;
+		}
+		else
+		{
+			cout << "Nome do professor: " << endl;
+			cin >> nomeProf;
+			cout << "Data de nascimento do professor: " << endl;
+			cin >> d >> m >> y;
+			prof = new Professor(codigo, nomeProf, d, m, y);
+			codigo++;
+			depto->incluiProf(prof);
+		}
+	}
 }
 
 void Principal::sair()
@@ -128,4 +253,32 @@ void Principal::sair()
 
 void Principal::executar()
 {
+	ElUniversidade* pAuxUni = NULL;
+	ElDepartamento* pAuxDep = NULL;
+
+	cout << "Universidades: " << endl;
+	listaUniv->listarUniversidades();
+
+	pAuxUni = listaUniv->getFirst();
+
+	while (pAuxUni != NULL)
+	{
+		cout << endl;
+		pAuxDep = pAuxUni->getUniv()->getFirstDept();
+
+		while (pAuxDep != NULL)
+		{
+			cout << "Departamento: " << pAuxDep->getDept()->getNome() << endl;
+			cout << "Disciplinas e professores: \n \n";
+			cout << "Disciplnas: " << endl;
+			pAuxDep->getDept()->imprimeDisc();
+			cout << endl;
+			cout << "Professores: " << endl;
+			pAuxDep->getDept()->imprimeProfs();
+			cout << "\n \n";
+			pAuxDep = pAuxDep->getNext();
+		}
+
+		pAuxUni = pAuxUni->getNext();
+	}
 }

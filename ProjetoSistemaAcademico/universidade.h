@@ -8,6 +8,7 @@ class Universidade: public Identificador
 private:
 	string nome;
 	ListaDepartamentos* pLista;
+	ListaAlunos* pListaAl;
 
 public:
 	Universidade();
@@ -18,5 +19,8 @@ public:
 	void setNome(string n);
 	void incluiDept(Departamento* d);
 	void imprimeDeptos();
+	void incluiAluno(Aluno* a);
+	Departamento* encontraDept(string n);
+	ElDepartamento* getFirstDept();
 };
  

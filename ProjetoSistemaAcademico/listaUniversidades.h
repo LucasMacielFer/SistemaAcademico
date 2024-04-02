@@ -16,4 +16,6 @@ public:
 	int getNumeroUniversidades();
 	void incluiUni(Universidade* u);
 	void listarUniversidades();
+	Universidade* encontraUni(string n);
+    ElUniversidade* getFirst();
 };

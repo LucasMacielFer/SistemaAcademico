@@ -1,4 +1,6 @@
 #include "professor.h"
+#include "universidade.h"
+#include "departamento.h"
 
 Professor::Professor():
 Pessoa(),

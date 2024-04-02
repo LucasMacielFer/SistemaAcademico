@@ -1,4 +1,5 @@
 #include "aluno.h"
+#include "universidade.h"
 
 Aluno::Aluno():
 Pessoa(),

@@ -1,8 +1,9 @@
 #pragma once
 #include "stdafx.h"
 #include "pessoa.h"
-#include "departamento.h"
-#include "universidade.h"
+
+class Departamento;
+class Universidade;
 
 class Professor : public Pessoa
 {

@@ -2,6 +2,8 @@
 #include "stdafx.h"
 #include "pessoa.h"
 
+class Universidade;
+
 class Aluno : public Pessoa
 {
 private:

@@ -54,3 +54,8 @@ void ListaDepartamentos::listarDeptos()
 		cout << paux->getDept()->getNome() << endl;
 	}
 }
+
+ElDepartamento* ListaDepartamentos::getFirst()
+{
+	return pDeptPrimeiro;
+}

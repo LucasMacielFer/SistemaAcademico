@@ -65,4 +65,15 @@ void Departamento::incluiProf(Professor* prof)
 {
 	pListaProfs->incluiProf(prof);
 	prof->setDepto(this);
+	prof->setUni(uni);
+}
+
+void Departamento::imprimeDisc()
+{
+	pListaDisc->listarDisciplinas();
+}
+
+void Departamento::imprimeProfs()
+{
+	pListaProfs->listarProfs();
 }

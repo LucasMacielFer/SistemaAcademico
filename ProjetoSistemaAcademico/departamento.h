@@ -24,4 +24,6 @@ public:
 	string getNome();
 	void incluiDisc(Disciplina* disc);
 	void incluiProf(Professor* prof);
+	void imprimeDisc();
+	void imprimeProfs();
 };
