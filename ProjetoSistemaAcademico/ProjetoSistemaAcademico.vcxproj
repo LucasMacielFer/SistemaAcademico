@@ -26,14 +26,12 @@
     <ClCompile Include="elDepartamento.cpp" />
     <ClCompile Include="elDisciplina.cpp" />
     <ClCompile Include="elProfessor.cpp" />
-    <ClCompile Include="elProfessor.h" />
     <ClCompile Include="elUniversidade.cpp" />
     <ClCompile Include="identificador.cpp" />
     <ClCompile Include="listaAlunos.cpp" />
     <ClCompile Include="listaDepartamentos.cpp" />
     <ClCompile Include="listaDisciplinas.cpp" />
     <ClCompile Include="listaProfessores.cpp" />
-    <ClCompile Include="listaProfessores.h" />
     <ClCompile Include="listaUniversidades.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pessoa.cpp" />
