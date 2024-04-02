@@ -55,8 +55,6 @@
     <ClInclude Include="pessoa.h" />
     <ClInclude Include="principal.h" />
     <ClInclude Include="professor.h" />
-    <ClInclude Include="recuperaArquivo.h" />
-    <ClInclude Include="salvaArquivo.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="universidade.h" />
   </ItemGroup>
