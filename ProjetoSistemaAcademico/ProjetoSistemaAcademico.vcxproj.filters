@@ -131,11 +131,5 @@
     <ClInclude Include="identificador.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
-    <ClInclude Include="salvaArquivo.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="recuperaArquivo.h">
-      <Filter>Arquivos de Cabeçalho</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

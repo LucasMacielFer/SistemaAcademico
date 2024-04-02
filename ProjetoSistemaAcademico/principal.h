@@ -1,6 +1,5 @@
 #pragma once
 #include "listaUniversidades.h"
-#include "professor.h"
 #include "stdafx.h"
 
 class Principal
